@@ -1,6 +1,4 @@
-/* =======================
-   THEME VARIABLES
-======================= */
+/* THEME VARIABLES */
 :root {
     --bg: #ffffff;
     --text: #1f2937;
@@ -28,9 +26,7 @@ body {
     line-height: 1.6;
 }
 
-/* =======================
-   HEADER (Sticky)
-======================= */
+/*HEADER (Sticky) */
 header {
     position: sticky;
     top: 0;
@@ -73,16 +69,12 @@ nav a:hover {
     font-size: 0.8rem;
 }
 
-/* =======================
-   SECTIONS
-======================= */
+/* SECTIONS */
 section {
     padding: 80px 10%;
 }
 
-/* =======================
-   HERO / ABOUT
-======================= */
+/* ABOUT */
 .hero {
     min-height: 90vh;
     background: var(--card);
@@ -129,18 +121,14 @@ section {
     box-shadow: 0 4px 10px rgba(0,0,0,0.05);
 }
 
-/* =======================
-   SECTION TITLES
-======================= */
+/* SECTION TITLES */
 .section-title {
     text-align: center;
     font-size: 2.1rem;
     margin-bottom: 40px;
 }
 
-/* =======================
-   SKILLS
-======================= */
+/* SKILLS*/
 .skills {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -160,9 +148,7 @@ section {
     transform: translateY(-4px); /* micro-interaction */
 }
 
-/* =======================
-   GALLERY (Interactive)
-======================= */
+/* GALLERY  */
 .gallery {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -185,9 +171,7 @@ section {
     transform: scale(1.08);
 }
 
-/* =======================
-   FOOTER / CONTACT
-======================= */
+/*FOOTER / CONTACT*/
 footer {
     background: #1f2937;
     color: white;
@@ -200,9 +184,6 @@ footer p {
     opacity: 0.9;
 }
 
-/* =======================
-   RESPONSIVE
-======================= */
 @media (max-width: 768px) {
     header {
         padding: 16px 5%;
@@ -216,3 +197,4 @@ footer p {
         font-size: 2.2rem;
     }
 }
+
