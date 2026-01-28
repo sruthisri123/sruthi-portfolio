@@ -35,10 +35,11 @@ The goal of this project is to demonstrate my understanding of basic UI design, 
 3. View the live site using GitHub Pages
 
 ---
-
 ## 🔹 Live Demo
+🔗 https://sruthisri123.github.io/sruthi-portfolio/
 
-🔗 (Add your GitHub Pages link here)
+## 🔹 Source Code
+🔗 https://github.com/sruthisri123/sruthi-portfolio
 
 ---
 
