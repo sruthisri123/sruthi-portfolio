@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sruthi | Portfolio</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+    <style>
+        :root {
+            --bg: #ffffff;
+            --text: #1f2937;
+            --card: #f3f4f6;
+            --primary: #4f46e5;
+        }
+
+        [data-theme="dark"] {
+            --bg: #0f172a;
+            --text: #f8fafc;
+            --card: #1e293b;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Inter', sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        /* ===== Header ===== */
+        header {
+            position: sticky;
+            top: 0;
+            background: var(--bg);
+            border-bottom: 1px solid #e5e7eb;
+            padding: 16px 10%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-weight: 700;
+            font-size: 1.3rem;
+            color: var(--primary);
+        }
+
+        nav a {
+            margin-left: 18px;
+            text-decoration: none;
+            color: var(--text);
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        nav a:hover {
+            color: var(--primary);
+        }
+
+        .theme-btn {
+            margin-left: 15px;
+            padding: 6px 12px;
+            border-radius: 20px;
+            border: 1px solid var(--primary);
+            background: none;
+            cursor: pointer;
+            font-size: 0.8rem;
+            color: var(--primary);
+        }
+
+        section {
+            padding: 80px 10%;
+        }
+
+        /* ===== Hero ===== */
+        .hero {
+            min-height: 90vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: var(--card);
+        }
+
+        .hero h1 {
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+        }
+
+        .hero span {
+            color: var(--primary);
+        }
+
+        .hero h2 {
+            font-size: 1.2rem;
+            font-weight: 400;
+            color: #6b7280;
+        }
+
+        .hero p {
+            max-width: 600px;
+            margin-top: 15px;
+        }
+
+        .quick-facts {
+            margin-top: 25px;
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .fact {
+            background: var(--bg);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+        }
+
+        /* ===== Section Title ===== */
+        .section-title {
+            text-align: center;
+            font-size: 2.2rem;
+            margin-bottom: 40px;
+        }
+
+        /* ===== Skills ===== */
+        .skills {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            text-align: center;
+        }
+
+        .skill {
+            padding: 18px;
+            background: var(--card);
+            border-radius: 12px;
+            font-weight: 600;
+        }
+
+        /* ===== Gallery ===== */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .gallery-item {
+            overflow: hidden;
+            border-radius: 12px;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            display: block;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.08);
+        }
+
+        /* ===== Resume ===== */
+        .resume-btn {
+            display: inline-block;
+            padding: 12px 26px;
+            background: var(--primary);
+            color: white;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        /* ===== Footer ===== */
+        footer {
+            background: #1f2937;
+            color: white;
+            text-align: center;
+            padding: 60px 10%;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                padding: 16px 5%;
+            }
+
+            section {
+                padding: 60px 5%;
+            }
+
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">Sruthi</div>
+    <nav>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#resume">Resume</a>
+        <a href="#contact">Contact</a>
+        <button class="theme-btn" onclick="toggleTheme()">🌙 / ☀️</button>
+    </nav>
+</header>
+
+<section id="about" class="hero">
+    <img 
+        src="images/me.jpeg" 
+        alt="Sruthi Sri"
+        style="
+            width:120px;
+            height:120px;
+            border-radius:50%;
+            margin-bottom:20px;
+            object-fit:cover;
+        "
+        data-aos="fade-down"
+    >
+    <h1 data-aos="fade-up">Hi, I’m <span>Sruthi Sri</span></h1>
+    <h2 data-aos="fade-up" data-aos-delay="100">B.Tech Computer Science Student</h2>
+    <p 
+        style="font-weight:600; margin-top:10px;"
+        data-aos="fade-up"
+        data-aos-delay="150"
+    >
+        Frontend & Programming Enthusiast
+    </p>
+    <p data-aos="fade-up" data-aos-delay="200">
+        I am a final-year Computer Science student interested in frontend development and programming.
+        I enjoy building simple and clean web interfaces while learning through hands-on projects.
+        This portfolio reflects my understanding of UI fundamentals, responsiveness, and basic frontend development.
+    </p>
+
+    <div class="quick-facts" data-aos="fade-up" data-aos-delay="300">
+        <div class="fact">💻 HTML • CSS • JavaScript</div>
+        <div class="fact">🎓 B.Tech CSE</div>
+        <div class="fact">📍 Andhra Pradesh</div>
+    </div>
+</section>
+
+<section id="skills">
+    <h2 class="section-title">Skills</h2>
+    <div class="skills">
+        <div class="skill">HTML5</div>
+        <div class="skill">CSS3</div>
+        <div class="skill">JavaScript</div>
+        <div class="skill">Java (Core)</div>
+        <div class="skill">MySQL</div>
+        <div class="skill">MongoDB (Basics)</div>
+        <div class="skill">Data Structures & Algorithms</div>
+        <div class="skill">AWS Cloud Fundamentals</div>
+        <div class="skill">Generative AI Basics</div>
+        <div class="skill">Deep Learning Fundamentals (NVIDIA)</div>
+    </div>
+</section>
+
+<section id="gallery">
+    <h2 class="section-title" data-aos="fade-up">Achievements Gallery</h2>
+    <p style="text-align:center; margin-bottom:30px; color:#6b7280;">
+        A few certifications and learning milestones from my academic journey.
+    </p>
+
+    <div class="gallery">
+        <div class="gallery-item" data-aos="zoom-in">
+            <img src="images/image1.png" alt="Certification">
+        </div>
+        <div class="gallery-item" data-aos="zoom-in" data-aos-delay="100">
+            <img src="images/image2.png" alt="Certification">
+        </div>
+        <div class="gallery-item" data-aos="zoom-in" data-aos-delay="200">
+            <img src="images/image3.png" alt="Certification">
+        </div>
+    </div>
+</section>
+
+<section id="resume">
+    <h2 class="section-title">Resume</h2>
+    <p style="text-align:center; margin-bottom:25px;">
+        Download my resume to know more about my academic background and skills.
+    </p>
+    <div style="text-align:center;">
+        <a href="SruthiT_resume.pdf" download class="resume-btn">Download Resume</a>
+    </div>
+</section>
+
+<footer id="contact">
+    <h2>Contact</h2>
+    <p>Email : sruthi17102004@gmail.com</p>
+    <p>Phone : (+91)8074714194
+    <p style="margin-top: 15px; font-size: 0.75rem; opacity: 0.6;">
+        © 2026 Sruthi | UI / Frontend Challenge
+    </p>
+</footer>
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+    AOS.init({ duration: 800, once: true });
+
+    function toggleTheme() {
+        const current = document.body.getAttribute("data-theme");
+        document.body.setAttribute(
+            "data-theme",
+            current === "dark" ? "light" : "dark"
+        );
+    }
+</script>
+
+</body>
+</html>
