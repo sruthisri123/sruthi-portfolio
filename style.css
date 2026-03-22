@@ -100,6 +100,10 @@ section {
     color: #6b7280;
 }
 
+[data-theme="dark"] .hero h2 {
+    color: #cbd5e1;
+}
+
 .hero p {
     max-width: 600px;
     margin-top: 15px;
